@@ -1,8 +1,17 @@
 import Game from "./Game.js"
+import GameView from"./GameView.js"
 let game=new Game();
-console.log(game.board)
-console.log("My turn is",game.turn);
-game.nextTurn();
-console.log("My turn is",game.turn);
-game.makeMove(3);
-console.log(game.board);
+let gameView=new GameView();
+
+
+let tiles=document.querySelector(".board-tile")
+tiles.forEach((tile)=>{
+   tile.addEventListener("click",()=>{
+       console.log(tile.dataset.index);
+   })
+})
+
+
+function onTileClick(i){
+
+}
